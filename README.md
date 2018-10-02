@@ -2,7 +2,7 @@
 
 I made an address book as my personal project.
 
-## [Live demo](https://reactjs-address-book.herokuapp.com/)
+## [Live demo](https://reactjs-address-book.herokuapp.com)
 
 ## Features:
 - Ability to create an account using email/password verification

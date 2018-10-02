@@ -104,7 +104,6 @@ export const startSetFields = () => {
 
             if(userData) {
                 for(var prop in userData) {
-                    console.log(userData[prop]);
                     dispatch(setFields(userData[prop]));
                 }
             }

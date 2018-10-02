@@ -312,3 +312,83 @@ ul#five li {
 	height: 80px;
 	width: 80px;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1300px) {
+    .login {
+        max-width: 50%;
+        padding-right: 40px;
+    }
+    .login form ul li button {
+        margin-left: 0 !important;
+    }
+    .contact-list {
+        margin-bottom: 20px;
+    }
+    .contact-list ul li {
+        border-right: 0;
+    }
+    .container form {
+        padding-left: 0;
+    }
+    .container form label {
+        display: block;
+    }
+    .container form input, .container form button, .delete-contact {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .login {
+        max-width: 360px;
+        margin: 0 auto;
+        display: block;
+        padding-right: 0;   
+    }
+    .login h2, .container h1 {
+        font-size: 36px;
+    }
+    .logo {
+        text-align: center;
+    }
+    .nav ul {
+        padding: 0;
+    }
+    .nav ul li {
+        height: 60px;
+    }
+    .nav ul li a, .nav ul li.logout {
+        padding: 17px;
+        text-align: center;
+    }
+    .nav ul li, .nav ul li:nth-child(3), .nav ul li:nth-child(4) {
+        float: none;
+        display: block;
+        position: relative;
+    }
+    .nav ul li:nth-child(3) {
+        top: 60px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    .nav ul li:nth-child(4) {
+        top: -60px;
+    }
+    .nav ul li:first-child a {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .contact-list ul li {
+        float: none;
+        width: 100% !important;
+        border-right: 0;
+        text-align: center;
+    }
+    .list-item {
+        text-decoration: none;
+    }
+    .list-item:hover {
+        background: #eae7e7;
+    }
+}

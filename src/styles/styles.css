@@ -293,3 +293,22 @@ ul#five li {
 .login form ul li button {
     margin-left: 126px;
 }
+
+.login-error {
+    margin: 0;
+    color: #fb0909;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 0;
+}
+.loader {
+	height: 90vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loader-image {
+	height: 80px;
+	width: 80px;
+}

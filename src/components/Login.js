@@ -10,6 +10,7 @@ class Login extends React.Component {
           loginEmail: '',
           loginPassword: '',
           error: '',
+          message: ''
         };
     }
 
@@ -43,7 +44,30 @@ class Login extends React.Component {
             
         })
         .catch((error) => {
-            console.log(error);
+            switch (error.code) {
+                case 'auth/email-already-in-use':
+                    this.setState(() => {
+                        return { message: `Email address ${this.state.email} already in use.`}
+                    });
+                  break;
+                case 'auth/invalid-email':
+                    this.setState(() => {
+                        return { message: `Email address ${this.state.email} is invalid.`}
+                    });
+                  break;
+                case 'auth/operation-not-allowed':
+                    this.setState(() => {
+                        return { message: `Error during sign up.`}
+                    });
+                  break;
+                case 'auth/weak-password':
+                    this.setState(() => {
+                        return { message: 'The password must have at least 6 characters'}
+                    });
+                  break;
+                default:
+                  console.log(error.message);
+              }
           });
       }
     login = (e) => {
@@ -53,8 +77,7 @@ class Login extends React.Component {
           this.setState(() => {
             return { error: 'Wrong email or password!' }
           })
-            console.log(error);
-          });
+        });
     }
 
     render() {
@@ -63,6 +86,7 @@ class Login extends React.Component {
                 <div className="auth">
                     <div className="login">
                         <h2>Log In</h2>
+                        {this.state.error && <p className="login-error">{this.state.error}</p>}
                         <form>
                             <ul>
                                 <li>
@@ -81,6 +105,7 @@ class Login extends React.Component {
                     </div>
                     <div className="login">
                         <h2>Sign Up</h2>
+                        {this.state.message && <p className="login-error">{this.state.message}</p>}
                         <form>
                             <ul>
                                 <li>

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.36;
+}
+
+.header, .container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+.logo {
+    padding: 45px 0;
+}
+.logo a {
+    font-size: 48px;
+    font-weight: 600;
+    color: #1b1f2b;
+    text-decoration: none;
+}
+.nav {
+    min-height: 80px;
+    background: #29354d;
+    border-radius: 6px;
+}
+.nav ul {
+    padding: 0 20px;
+}
+.nav ul li {
+    float: left;
+    font-size: 20px;
+    height: 80px;
+}
+.nav ul li:nth-child(3), .nav ul li:nth-child(4) {
+    float: right;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    display: block;
+    padding: 26px 20px;
+}
+.nav ul li a:hover, .is-active {
+    background: #1b1f2b;
+}
+.nav ul li.logout {
+    color: #fff;
+    padding: 26px 20px;
+    cursor: pointer;
+}
+.nav ul li.logout:hover {
+    background: #1b1f2b;
+}
+.contacts {
+    padding-top: 30px;
+}
+.contacts input {
+	width: 100%;
+	height: 54px;
+	padding: 10px 20px;
+    border: 2px solid #e0e1e5;
+    border-radius: 4px;
+	background: #FFF;
+	font-size: 20px;
+	color: #adb0b7;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    transition: .5s all;
+}
+.contacts input:focus {
+    border: 2px solid #1b1f2b;
+}
+.contacts ::-webkit-input-placeholder { /* WebKit browsers */
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #adb0b7;
+	font-weight: 400;
+}
+.contacts :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #adb0b7;
+	font-weight: 400;
+	opacity: 1;
+}
+.contacts ::-moz-placeholder { /* Mozilla Firefox 19+ */
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #adb0b7;
+	font-weight: 400;
+	opacity: 1;
+}
+.contacts :-ms-input-placeholder { /* Internet Explorer 10+ */
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #adb0b7;
+	font-weight: 400;
+}
+
+.contact-list {
+    padding-top: 20px;
+}
+.contact-list ul {
+    border: 1px solid #eae8ea;
+    border-top:0px;
+    overflow: hidden;
+    min-height: 50px;
+}
+.contact-list ul.ul-list {
+    border-top: 1px solid #eae8ea;
+}
+.contact-list > ul li {
+    font-weight: bold;
+}
+.contact-list ul li {
+    float: left;
+    width: 50%;
+    min-height: 50px;
+    padding-left: 12px;
+    font-size: 18px;
+    line-height: 50px;
+    border-right: 1px solid#eae8ea;
+    word-break: break-word;
+    cursor: pointer;
+}
+.contact-list ul li:last-child {
+    border-right: 0;
+}
+.contact-list > ul li {
+    cursor: default;
+}
+ul#three li {
+    width: 33%;
+}
+ul#four li {
+    width: 25%;
+}
+ul#five li {
+    width: 20%;
+}
+.no-contacts {
+    margin: 0;
+    padding-top: 10px;
+    color: #1b1f2b;
+    font-size: 40px;
+    font-weight: 400;
+}
+.list-item {
+    display: block;
+    color: #000;
+}
+.list-item:hover {
+    background: #f5f5f5;
+}
+.asc {
+    background: url('/images/chevron_down.png') no-repeat right 15px center;
+}
+.desc {
+    background: url('/images/chevron_up.png') no-repeat right 15px center;
+}
+
+.container h1 {
+    margin: 0;
+    padding-top: 40px;
+    color: #1b1f2b;
+    font-size: 40px;
+    font-weight: 400;
+}
+.container form {
+    padding-left: 100px;
+    padding-top: 20px;
+}
+.container form ul li {
+    margin-bottom: 22px;
+}
+.container form label {
+    color: #1b1f2b;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 132px;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+.container form input {
+    margin-left: 40px;
+    max-width: 750px;
+    width: 100%;
+	height: 54px;
+	padding: 10px 20px;
+    border: 2px solid #e0e1e5;
+    border-radius: 4px;
+    background: #FFF;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #1b1f2b;
+	font-weight: 400;
+    outline: none;
+    transition: .5s all;
+}
+.container form input:focus {
+    border: 2px solid #1b1f2b;
+}
+.container form button, .delete-contact {
+    margin-left: 178px;
+    border: 0;
+    height: 55px;
+    padding: 0 22px;
+    border-radius: 4px;
+    background: #29354d;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    outline: none;
+    transition: .3s all;
+    cursor: pointer;
+}    
+.container form button:hover {
+    background: #1b1f2b;
+}
+.delete-contact {
+    background: #fb0909;
+    margin-left: 277px;
+    margin-bottom: 20px; 
+}
+.delete-contact:hover {
+    background: #a90202;
+}
+.error {
+    margin: 0;
+    padding-bottom: 20px;
+    color: #fb0909;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.settings p {
+    color: #1b1f2b;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 15px;
+}
+.settings ul {
+    padding-top: 15px;
+}
+.settings ul li  {
+    margin-bottom: 10px;
+}
+.settings ul li label {
+    margin-left: 5px;
+    font-weight: 600;
+    color: #1b1f2b;
+}
+.login {
+    display: inline-block;
+    max-width: 595px;
+    width: 100%;
+}
+.login h2 {
+    margin: 0;
+    font-size: 40px;
+    color: #1b1f2b;
+    font-weight: 600;
+}
+.login form {
+    padding-left: 0;
+    padding-top: 15px;
+}
+.login form ul li label {
+    justify-content: flex-start;
+    min-width: 120px;
+}
+.login form ul li input {
+    max-width: 360px;
+    margin-left: 0;
+}
+.login form ul li button {
+    margin-left: 126px;
+}
